@@ -3,5 +3,5 @@ class SurveyQuestion < ActiveRecord::Base
 
   belongs_to :survey
 
-  validates :survey_id, :value, presence: true
+  validates :value, presence: true
 end

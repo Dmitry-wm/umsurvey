@@ -11,6 +11,6 @@ class Survey < ActiveRecord::Base
   accepts_nested_attributes_for :questions, allow_destroy: true
 
   def questions_presence
-    errors.add(:questions_deleted, "At least one question should be present") if  questions.all?(&:marked_for_destruction?)
+    #errors.add(:questions_deleted, "At least one question should be present") if  questions.all?(&:marked_for_destruction?)
   end
 end
