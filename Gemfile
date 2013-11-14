@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '3.2.8'
 
+gem "squeel"
+
 # Use postgres the database for Active Record
 gem 'pg'
 gem 'postgres_ext'

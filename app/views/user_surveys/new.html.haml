@@ -1,0 +1,8 @@
+%h2= @user_survey.title
+= simple_form_for @user_survey do |f|
+  = f.simple_fields_for :answers do |ans|
+    %h6= ans.object.question_value
+    = ans.input :value, label: false
+    = ans.input :survey_question_id, as: :hidden
+  = f.input :survey_id, as: :hidden
+  = f.submit 'Submit'

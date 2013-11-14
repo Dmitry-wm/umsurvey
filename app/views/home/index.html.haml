@@ -1,0 +1,9 @@
+- if @available_surveys.empty?
+  %h3 No available surveys
+- else
+  %h3 Available surveys
+  .table
+    - @available_surveys.each do |survey|
+      .tr
+        .td
+          = link_to survey.title.capitalize, new_user_surveys_path(survey_id: survey.id)
