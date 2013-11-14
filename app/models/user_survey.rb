@@ -13,9 +13,15 @@ class UserSurvey < ActiveRecord::Base
   delegate :title, to: :survey
   delegate :full_name, to: :user, prefix: true
 
+  after_create :send_report
+
   def init_answers
     questions.each do |q|
       answers.build(survey_question_id: q.id)
     end
+  end
+
+  def send_report
+    Notifier.report_notification(self).deliver if user.supervisor
   end
 end
