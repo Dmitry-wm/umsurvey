@@ -22,6 +22,8 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+
+
 #devise
 gem "devise"
 

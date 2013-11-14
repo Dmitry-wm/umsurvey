@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Umsurv::Application.load_tasks
+Umsurvey::Application.load_tasks
