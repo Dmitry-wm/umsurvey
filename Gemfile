@@ -7,6 +7,9 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'postgres_ext'
 
+#heroku
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
