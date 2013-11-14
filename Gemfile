@@ -25,6 +25,18 @@ gem 'jquery-rails'
 #use haml
 gem "haml-rails"
 
+#botstrap rails
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
+#use simple form
+gem 'simple_form'
+
+#use cocoon for nested fields
+gem "cocoon"
+
+
 #devise
 gem "devise"
 
