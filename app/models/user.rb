@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def available_surveys
     Survey.joins{ result_surveys.outer }.where{ (result_surveys.user_id.eq(my{ id }) & (result_surveys.created_at.lteq(7.days.ago))) | result_surveys.id.eq(nil) }.uniq
   end
+
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 end

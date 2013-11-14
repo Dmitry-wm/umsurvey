@@ -11,6 +11,7 @@ class UserSurvey < ActiveRecord::Base
   accepts_nested_attributes_for :answers
 
   delegate :title, to: :survey
+  delegate :full_name, to: :user, prefix: true
 
   def init_answers
     questions.each do |q|
