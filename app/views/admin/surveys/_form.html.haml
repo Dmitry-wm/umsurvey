@@ -1,7 +1,7 @@
 = semantic_form_for [:admin, @survey] do |f|
   %fieldset.inputs
     .errors
-      =@survey.errors[:questions_deleted].join(", ")
+      = @survey.errors[:questions_deleted].join(", ")
     %legend
       %span Survey
     %ol

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131114115401) do
+ActiveRecord::Schema.define(:version => 20131114134151) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -58,6 +58,27 @@ ActiveRecord::Schema.define(:version => 20131114115401) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "user_survey_answers", :force => true do |t|
+    t.string   "value"
+    t.integer  "user_survey_id"
+    t.integer  "survey_question_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "user_survey_answers", ["survey_question_id"], :name => "index_user_survey_answers_on_survey_question_id"
+  add_index "user_survey_answers", ["user_survey_id"], :name => "index_user_survey_answers_on_user_survey_id"
+
+  create_table "user_surveys", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "survey_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "user_surveys", ["survey_id"], :name => "index_user_surveys_on_survey_id"
+  add_index "user_surveys", ["user_id"], :name => "index_user_surveys_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

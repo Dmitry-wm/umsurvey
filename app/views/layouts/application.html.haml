@@ -6,4 +6,11 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    = nav_bar brand: "Survey" do
+      = menu_group do
+        -if user_signed_in?
+          = menu_item "Home", root_path
+        - else
+          = menu_item "Authentication"
+    .container
+      = yield
