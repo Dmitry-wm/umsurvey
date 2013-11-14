@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '3.2.8'
 
-# Use sqlite3 as the database for Active Record
-gem 'mysql2'
+# Use postgres the database for Active Record
+gem 'pg'
+gem 'postgres_ext'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -21,11 +22,11 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#devise
+gem "devise"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
