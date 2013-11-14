@@ -51,7 +51,8 @@ group :doc do
 end
 
 group :development do
- gem "erb2haml"
+  gem "pry-rails"
+  gem "erb2haml"
 end
 
 # Use ActiveModel has_secure_password

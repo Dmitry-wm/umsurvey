@@ -1,0 +1,14 @@
+= semantic_form_for [:admin, @survey] do |f|
+  %fieldset.inputs
+    .errors
+      =@survey.errors[:questions_deleted].join(", ")
+    %legend
+      %span Survey
+    %ol
+      = f.input :title
+      #questions
+        = f.semantic_fields_for :questions do |question|
+          = render 'question_fields', f: question
+        .links
+          = link_to_add_association 'add question', f, :questions
+      = f.actions
