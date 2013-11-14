@@ -9,6 +9,9 @@ gem "squeel"
 gem 'pg'
 gem 'postgres_ext'
 
+#heroku
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
