@@ -20,7 +20,7 @@ gem 'coffee-rails'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 
 #use haml
 gem "haml-rails"
@@ -36,6 +36,8 @@ gem 'simple_form'
 #use cocoon for nested fields
 gem "cocoon"
 
+#use active admin
+gem 'activeadmin'
 
 #devise
 gem "devise"

@@ -3,9 +3,11 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable
 
   attr_accessible :first_name, :last_name, :password, :password_confirmation, :email, :remember_mes
-  validates :first_name, :last_name, :email, :password, :password_confirmation, presence: true
-  # attr_accessible :title, :body
+  validates :first_name, :last_name, :email, presence: true
+  validates :email, uniqueness: true
+  validates :password, confirmation: true, presence: true, on: :create
+  validates :password, confirmation: true, on: :update, if: ->(user){ user.password.present? }
 end
