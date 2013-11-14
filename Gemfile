@@ -22,7 +22,8 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-
+#use haml
+gem "haml-rails"
 
 #devise
 gem "devise"
@@ -33,6 +34,10 @@ gem 'jbuilder'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development do
+ gem "erb2haml"
 end
 
 # Use ActiveModel has_secure_password
