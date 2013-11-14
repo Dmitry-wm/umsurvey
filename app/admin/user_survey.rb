@@ -1,5 +1,8 @@
 ActiveAdmin.register UserSurvey do
   menu label: "Survey Results"
+
+  actions :index, :show, :destroy
+
   index do
     column :user_id
     column :user_full_name
@@ -7,7 +10,7 @@ ActiveAdmin.register UserSurvey do
     default_actions
   end
 
-  show do  |result|
+  show do |result|
     attributes_table do
       row :title
       row :employee do
@@ -29,4 +32,8 @@ ActiveAdmin.register UserSurvey do
       end
     end
   end
+
+  filter :created_at
+  filter :user_first_name_or_user_last_name, as: :string
+  filter :user_email, as: :string
 end

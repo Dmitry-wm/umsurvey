@@ -58,6 +58,7 @@ end
 group :development do
   gem "pry-rails"
   gem "erb2haml"
+  gem "letter_opener"
 end
 
 # Use ActiveModel has_secure_password

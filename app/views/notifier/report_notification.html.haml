@@ -1,0 +1,12 @@
+%h1 Report filled by #{@user.full_name}
+
+%h2= @survey.title
+
+%table.table
+  %tr
+    %td Question
+    %td Answer
+  - @survey.answers.includes(:question).each do |answer|
+    %tr
+      %td= answer.question_value
+      %td= answer.value
